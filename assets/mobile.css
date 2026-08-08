@@ -1,0 +1,196 @@
+/* Phone-first overrides for Docsify (Studio 5000 Mastery) */
+
+:root {
+  --s5-bg: #0f172a;
+  --s5-card: #1e293b;
+  --s5-text: #e2e8f0;
+  --s5-muted: #94a3b8;
+  --s5-accent: #3b82f6;
+  --s5-warn: #f59e0b;
+  --s5-ok: #22c55e;
+  --s5-danger: #ef4444;
+  --s5-radius: 12px;
+  --s5-pad: max(12px, env(safe-area-inset-left));
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Readable base size on phones */
+.markdown-section {
+  font-size: 16.5px !important;
+  line-height: 1.55 !important;
+  max-width: 48rem !important;
+  padding: 1.25rem var(--s5-pad) 4rem !important;
+}
+
+.markdown-section h1 {
+  font-size: 1.65rem !important;
+  line-height: 1.25 !important;
+  margin-top: 0.5rem !important;
+}
+
+.markdown-section h2 {
+  font-size: 1.3rem !important;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.35rem;
+  margin-top: 1.75rem !important;
+}
+
+.markdown-section h3 {
+  font-size: 1.1rem !important;
+}
+
+/* Tables scroll horizontally instead of crushing layout */
+.markdown-section table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 0.92rem;
+  border-collapse: collapse;
+}
+
+.markdown-section th,
+.markdown-section td {
+  white-space: nowrap;
+  padding: 0.5rem 0.65rem !important;
+}
+
+.markdown-section tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* Code blocks: scroll, don’t overflow viewport */
+.markdown-section pre {
+  border-radius: var(--s5-radius);
+  font-size: 0.82rem !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+.markdown-section code {
+  font-size: 0.88em;
+  word-break: break-word;
+}
+
+.markdown-section pre code {
+  word-break: normal;
+  white-space: pre;
+}
+
+/* Bigger tap targets for links in content */
+.markdown-section a {
+  padding: 0.05em 0;
+  text-decoration-thickness: 1.5px;
+}
+
+/* Sidebar: friendlier on mobile */
+.sidebar {
+  padding-top: 0.5rem;
+}
+
+.sidebar-nav {
+  font-size: 15px;
+}
+
+.sidebar-nav li {
+  margin: 2px 0;
+}
+
+.sidebar-nav a {
+  padding: 0.45rem 0.5rem !important;
+  border-radius: 8px;
+}
+
+.sidebar-nav a:hover {
+  background: #f1f5f9;
+}
+
+/* Sticky search on mobile */
+.search {
+  margin-bottom: 0.5rem !important;
+  padding: 0.5rem !important;
+}
+
+.search input {
+  font-size: 16px !important; /* prevents iOS zoom on focus */
+  border-radius: 10px !important;
+  padding: 0.65rem 0.75rem !important;
+}
+
+/* App bar */
+.app-nav {
+  font-size: 14px;
+}
+
+.app-nav a {
+  padding: 0.4rem 0.55rem !important;
+}
+
+/* Toggle button larger for thumbs */
+.sidebar-toggle {
+  width: 48px !important;
+  height: 48px !important;
+  bottom: max(12px, env(safe-area-inset-bottom)) !important;
+  left: max(12px, env(safe-area-inset-left)) !important;
+  background: var(--s5-accent) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45);
+  opacity: 1 !important;
+}
+
+.sidebar-toggle span {
+  background-color: #fff !important;
+  width: 18px !important;
+  height: 2px !important;
+  margin: 3px auto !important;
+}
+
+/* Pagination buttons — full width friendly on small screens */
+.content .pagination-item {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .app-nav {
+    position: static !important;
+    margin: 0.5rem 0 0 !important;
+  }
+
+  .markdown-section {
+    padding-bottom: 5.5rem !important;
+  }
+
+  /* Stack job-aid “callout” style blockquotes */
+  .markdown-section blockquote {
+    border-left-width: 4px;
+    background: #eff6ff;
+    border-radius: 0 10px 10px 0;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+  }
+
+  /* Lists more touch-friendly */
+  .markdown-section li {
+    margin: 0.35em 0;
+  }
+}
+
+/* Cover-style home polish */
+.markdown-section > h1:first-child {
+  letter-spacing: -0.02em;
+}
+
+/* Print / share friendly */
+@media print {
+  .sidebar, .sidebar-toggle, .app-nav, .search {
+    display: none !important;
+  }
+  .markdown-section {
+    max-width: 100% !important;
+  }
+}

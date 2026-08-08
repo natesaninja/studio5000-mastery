@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Studio 5000 / Logix mastery for industrial electricians — learn on the go, troubleshoot on the floor." />
+  <title>Studio 5000 Mastery</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <link rel="stylesheet" href="assets/mobile.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+  <div id="app">Loading…</div>
+  <script>
+    window.$docsify = {
+      name: 'Studio 5000 Mastery',
+      nameLink: '/#/',
+      repo: '',
+      homepage: '00_START_HERE.md',
+      loadSidebar: true,
+      loadNavbar: true,
+      mergeNavbar: true,
+      auto2top: true,
+      maxLevel: 3,
+      subMaxLevel: 2,
+      relativePath: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search (won’t start, force, TON…)',
+        noData: 'No results',
+        depth: 4,
+        hideOtherSidebarContent: false,
+      },
+      pagination: {
+        previousText: 'Prev',
+        nextText: 'Next',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md',
+      },
+      notFoundPage: true,
+      themeColor: '#2563eb',
+      formatUpdated: '{YYYY}-{MM}-{DD}',
+      plugins: [
+        function (hook) {
+          hook.doneEach(function () {
+            // Open external links in new tab on phone
+            document.querySelectorAll('.markdown-section a[href^="http"]').forEach(function (a) {
+              a.setAttribute('target', '_blank');
+              a.setAttribute('rel', 'noopener');
+            });
+          });
+        },
+      ],
+    };
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    }
+  </script>
+</body>
+</html>

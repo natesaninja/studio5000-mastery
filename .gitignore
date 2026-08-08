@@ -1,0 +1,25 @@
+# Studio 5000 / local artifacts
+*.ACD
+*.L5K
+*.L5X
+*.bak
+*.tmp
+~$*
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Personal notes with secrets
+.env
+**/secrets*
+**/passwords*
+
+# Optional local output
+labs/**/output/
+LABS/**/output/
+**/_local/
+
+# Node
+node_modules/

@@ -5,7 +5,8 @@
 1. **Learning guide** — industrial electrician novice → expert Logix programmer  
 2. **On-the-job reference** — open while troubleshooting real machines  
 
-**Phone-friendly site:** open GitHub Pages after deploy (see below), or run locally with any static server.  
+**Phone site (GitHub Pages):** https://natesaninja.github.io/studio5000-mastery/  
+**GitHub repo:** https://github.com/natesaninja/studio5000-mastery  
 **Phone tips:** [PHONE.md](PHONE.md)
 
 ---
